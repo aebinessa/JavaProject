@@ -7,11 +7,6 @@ double balance;
 String transactionHistory;
 
 
-public BankAccount(int accountNumber, double balance, String transactionHistory) {
-    this.accountNumber = accountNumber;
-    this.balance = balance;
-    this.transactionHistory = transactionHistory;
-}
 public int getAccountNumber() {
     return accountNumber;
 }
