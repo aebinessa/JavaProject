@@ -1,7 +1,9 @@
+import java.util.Date;
+
 public class Transaction {
 
-    private String date;
-    private String type = "withdrawal"; // or "deposit"
+    private Date date;
+    private String type;
     private int amount;
 
     public String getType() {
@@ -20,15 +22,15 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public String getdate() {
+    public Date getdate() {
         return date;
     }
 
-    public void setdate(String date) {
+    public void setdate(Date date) {
         this.date = date;
     }
 
-    public Transaction(String date, String type, int amount) {
+    public Transaction(Date date, String type, int amount) {
         this.date = date;
         this.type = type;
         this.amount = amount;
