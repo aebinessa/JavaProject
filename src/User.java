@@ -1,21 +1,21 @@
 public class User {
     private String username;
 
-    public User(String username, String password, String account) {
-        this.username = username;
-        this.password = password;
-        this.account = account;
-    }
-
     private String password;
 
-    private String account;
+    BankAccount account = new BankAccount();
 
-    public String getAccount() {
+    public BankAccount getAccount() {
         return account;
     }
 
-    public void setAccount(String account) {
+    public void setAccount(BankAccount account) {
+        this.account = account;
+    }
+
+    public User(String username, String password, BankAccount account) {
+        this.username = username;
+        this.password = password;
         this.account = account;
     }
 
