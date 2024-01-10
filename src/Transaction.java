@@ -1,8 +1,10 @@
+import java.util.Date;
+
 public class Transaction {
 
-    private String date;
-    private String type = "withdrawal"; // or "deposit"
-    private int amount;
+    private Date date;
+    private String type;
+    private double amount;
 
     public String getType() {
         return type;
@@ -12,23 +14,23 @@ public class Transaction {
         this.type = type;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
-    public String getdate() {
+    public Date getdate() {
         return date;
     }
 
-    public void setdate(String date) {
+    public void setdate(Date date) {
         this.date = date;
     }
 
-    public Transaction(String date, String type, int amount) {
+    public Transaction(Date date, String type, int amount) {
         this.date = date;
         this.type = type;
         this.amount = amount;
