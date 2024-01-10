@@ -16,7 +16,13 @@ public class User {
         System.out.println("Account Number: " + account.getAccountNumber());
         System.out.println("Balance: " + account.getBalance());
         System.out.println("Transaction History:");
-        account.displayTransactionHistory();
+        account.showTransactionHistory();
+    }
+
+    public void updateAccountDetails(String newUsername, String newPassword) {
+        username = newUsername;
+        password = newPassword;
+    }
 
     public BankAccount getAccount() {
         return account;

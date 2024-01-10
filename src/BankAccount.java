@@ -40,7 +40,7 @@ public class BankAccount {
 
     }
 
-    public void theTransactionHistory() {
+    public void showTransactionHistory() {
 
         for (Transaction transaction : transactionHistory) {
             System.out.println("Date: " + transaction.getdate() + ", Type: " + transaction.getType() + ", Amount: "
