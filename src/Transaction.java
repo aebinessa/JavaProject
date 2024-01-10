@@ -4,7 +4,7 @@ public class Transaction {
 
     private Date date;
     private String type;
-    private int amount;
+    private double amount;
 
     public String getType() {
         return type;
@@ -14,7 +14,7 @@ public class Transaction {
         this.type = type;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
@@ -30,7 +30,7 @@ public class Transaction {
         this.date = date;
     }
 
-    public Transaction(Date date, String type, int amount) {
+    public Transaction(Date date, String type, double amount) {
         this.date = date;
         this.type = type;
         this.amount = amount;
