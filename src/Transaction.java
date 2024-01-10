@@ -1,6 +1,6 @@
 public class Transaction {
 
-    private String data;
+    private String date;
     private String type = "withdrawal"; // or "deposit"
     private int amount;
 
@@ -20,16 +20,16 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public String getData() {
-        return data;
+    public String getdate() {
+        return date;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setdate(String date) {
+        this.date = date;
     }
 
-    public Transaction(String data, String type, int amount) {
-        this.data = data;
+    public Transaction(String date, String type, int amount) {
+        this.date = date;
         this.type = type;
         this.amount = amount;
     }

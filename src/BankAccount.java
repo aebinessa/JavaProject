@@ -1,54 +1,44 @@
 public class BankAccount {
-    
-int accountNumber;
 
-double balance;
+    int accountNumber;
 
-String transactionHistory;
+    double balance;
 
+    String transactionHistory;
 
-public int getAccountNumber() {
-    return accountNumber;
-}
-public void setAccountNumber(int accountNumber) {
-    this.accountNumber = accountNumber;
-}
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 
+    public double getBalance() {
+        return balance;
+    }
 
-public double getBalance() {
-    return balance;
-}
-public void setBalance(double balance) {
-    this.balance = balance;
-}
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
+    public String getTransactionHistory() {
+        return transactionHistory;
+    }
 
+    public void setTransactionHistory(String transactionHistory) {
+        this.transactionHistory = transactionHistory;
+    }
 
+    public void deposit(int amount, String type) {
 
-public String getTransactionHistory() {
-    return transactionHistory;
-}
-public void setTransactionHistory(String transactionHistory) {
-    this.transactionHistory = transactionHistory;
-}
+    }
 
+    public void withdrawal(int amount, String type) {
 
+    }
 
-public void deposit(double despositAmount) {
-    
-    
+    public void theTransactionHistory(String transactionHistory) {
 
-}
-
-
-public void withdrawal(double withdrawalAmount) {
-    
-}
-
-
-public void  theTransactionHistory(String transactionHistory) {
-    
-    
-}
+    }
 }
