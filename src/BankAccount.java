@@ -1,12 +1,21 @@
+
+
 public class BankAccount {
     
-int accountNumber;
+private int accountNumber;
 
-double balance;
+private double balance;
 
-String transactionHistory;
+private String transactionHistory;
 
 
+public BankAccount(int accountNumber, double balance, String transactionHistory) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+    this.transactionHistory = transactionHistory;
+
+    
+}
 public int getAccountNumber() {
     return accountNumber;
 }
@@ -35,14 +44,19 @@ public void setTransactionHistory(String transactionHistory) {
 
 
 
-public void deposit(double despositAmount) {
+public void deposit(double balance) {
     
+    if (balance<0) {
+
+        
+        
+    }
     
 
 }
 
 
-public void withdrawal(double withdrawalAmount) {
+public void withdrawal(double balance) {
     
 }
 
