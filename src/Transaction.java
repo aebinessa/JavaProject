@@ -22,7 +22,7 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public Date getdate() {//change getdate to getDate
+    public Date getdate() {
         return date;
     }
 
