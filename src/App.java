@@ -4,7 +4,6 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         BankSingleton bankSingleton = BankSingleton.getInstance();
-
         bankSingleton.createUser("AbdullahB", "Coded123");
 
         Scanner scanner = new Scanner(System.in);
@@ -12,11 +11,18 @@ public class App {
         String username = scanner.nextLine();
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
-
-        if (bankSingleton.austhenticateUser(username, password)) {
-            System.out.println("Login Successful");
-        } else {
-            System.out.println("Login Unsuccessful");
+        while (bankSingleton.austhenticateUser(username, password) == false) {
+            if (bankSingleton.austhenticateUser(username, password)) {
+                System.out.println("Login Successful");
+                break;
+            } else {
+                System.out.println("Login Unsuccessful");
+                System.out.print("Enter username: ");
+                username = scanner.nextLine();
+                System.out.print("Enter password: ");
+                password = scanner.nextLine();
+                break;
+            }
         }
 
         User user = bankSingleton.getUserAccount(username);
