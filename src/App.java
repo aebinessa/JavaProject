@@ -11,8 +11,8 @@ public class App {
         String username = scanner.nextLine();
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
-        while (bankSingleton.austhenticateUser(username, password) == false) {
-            if (bankSingleton.austhenticateUser(username, password)) {
+        while (bankSingleton.authenticateUser(username, password) == false) {
+            if (bankSingleton.authenticateUser(username, password)) {
                 System.out.println("Login Successful");
                 break;
             } else {

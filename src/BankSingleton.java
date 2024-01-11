@@ -3,69 +3,69 @@ import java.util.List;
 
 public class BankSingleton {
 
- private static BankSingleton instance;
- private List<User>userAccounts;
- 
- private BankSingleton(){
+    private static BankSingleton instance;
+    private List<User> userAccounts;
 
-    userAccounts = new ArrayList<>();
- }
+    private BankSingleton() {
 
- public static BankSingleton getInstance(){
-
-    if(instance == null){
-
-        instance = new BankSingleton();
+        userAccounts = new ArrayList<>();
     }
-    return instance;
- }
 
- public boolean austhenticateUser(String userName, String password){
+    public static BankSingleton getInstance() {
 
-    for(User user : userAccounts){
+        if (instance == null) {
 
-        if (user.getUsername().equals(userName) && user.getPassword().equals(password)) {
-            return true;
+            instance = new BankSingleton();
         }
-    }
-    return false;
- }
- public void createUser(String userName, String password){
-
-    if (!userExists(userName)) {
-        BankAccount account = new BankAccount(generateAccountNumber());
-        User newUser = new User(userName, password, account);
-        userAccounts.add(newUser);
-    }
-    else{
-        System.out.println("Username already exists. Choose a different one. ");
+        return instance;
     }
 
- }
+    public boolean authenticateUser(String userName, String password) {
 
-private boolean userExists(String userName){
-    for(User user : userAccounts){
-        if(user.getUsername().equals(userName)){
-            return true;
+        for (User user : userAccounts) {
+
+            if (user.getUsername().equals(userName) && user.getPassword().equals(password)) {
+                return true;
+            }
         }
-        }
-        return false;}
-    
-
-public User getUserAccount(String userName){
-
-    for(User user : userAccounts){
-
-        if(user.getUsername().equals(userName)){
-
-            return user;
-        }
+        return false;
     }
-    return null;
-}
 
-private String generateAccountNumber(){
+    public void createUser(String userName, String password) {
 
-    return "Account " + System.currentTimeMillis();
-}
+        if (!userExists(userName)) {
+            BankAccount account = new BankAccount(generateAccountNumber());
+            User newUser = new User(userName, password, account);
+            userAccounts.add(newUser);
+        } else {
+            System.out.println("Username already exists. Choose a different one. ");
+        }
+
+    }
+
+    private boolean userExists(String userName) {
+        for (User user : userAccounts) {
+            if (user.getUsername().equals(userName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public User getUserAccount(String userName) {
+
+        for (User user : userAccounts) {
+
+            if (user.getUsername().equals(userName)) {
+
+                return user;
+            }
+        }
+        return null;
+    }
+
+    private String generateAccountNumber() {
+
+        return "Account " + System.currentTimeMillis();
+    }
 }
